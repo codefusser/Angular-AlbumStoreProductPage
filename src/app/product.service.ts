@@ -8,17 +8,14 @@ import 'rxjs/add/operator/map';
 })
 
 export class ProductService {
-  private _albumUrl: string;
+  private _albumUrl = '../assets/album.json';
 
   constructor(private _http: Http;){
-    //this._http = '../assets/album.json';
     this._albumUrl = this._http;
   }
 
   getAlbum(id:number): string
   {
-    result : string;
-    result = this._http.get(_albumUrl);
-    return result;
+    return this._http.get(_albumUrl).map(response => albumInfo = response);;
   }
 }
