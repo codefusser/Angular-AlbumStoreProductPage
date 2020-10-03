@@ -12,7 +12,7 @@ export class ProductService {
   private _albumUrl: string;
 
   constructor(_http: Http){
-    this._http = '../assets/album.json';
+    //this._http = '../assets/album.json';
     this._albumUrl = this._http;
   }
 
