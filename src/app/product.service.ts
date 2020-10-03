@@ -8,10 +8,9 @@ import 'rxjs/add/operator/map';
 })
 
 export class ProductService {
-  private _http: Http;
   private _albumUrl: string;
 
-  constructor(_http: Http){
+  constructor(private _http: Http;){
     //this._http = '../assets/album.json';
     this._albumUrl = this._http;
   }
