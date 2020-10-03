@@ -11,8 +11,9 @@ export class ProductService {
   private _http: Http;
   private _albumUrl: string;
 
-  constructor(){
-    this._albumUrl = '../assets/album.json';
+  constructor(_http: Http){
+    this._http = '../assets/album.json';
+    this._albumUrl = this._http;
   }
 
   getAlbum(id:number): string
