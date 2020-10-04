@@ -10,11 +10,11 @@ import 'rxjs/add/operator/map';
 export class ProductService {
   private _albumUrl = '../assets/album.json';
 
-  constructor(private _http: Http;){
-    this._albumUrl = this._http;
+  constructor(private _http: Http){
+    //this._albumUrl = this._http;
   }
 
-  getAlbum(id:number): string
+  getAlbum()
   {
     return this._http.get(this._albumUrl).map(response => response.json());
   }
